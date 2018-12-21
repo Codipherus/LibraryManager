@@ -10,7 +10,14 @@ namespace LibraryManager.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var list = DL_Book.GetList();
+            return View(list);
+        }
+
+        public ActionResult Book(int id)
+        {
+            var book = DL_Book.GetList().First(x => x.Id == id);
+            return View(book);
         }
 
         public ActionResult About()
