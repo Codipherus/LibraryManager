@@ -14,13 +14,21 @@ namespace LibraryManager
 
         public string Author;
 
+        public int AuthorID = 0;
+
         public DateTime Release;
 
         public string Genre;
 
+        public int GenreID = 0;
+
         public string Subgenre;
 
+        public int SubGenreID = 0;
+
         public string Publisher;
+
+        public int PublisherID = 0;
 
         public int Length;
 

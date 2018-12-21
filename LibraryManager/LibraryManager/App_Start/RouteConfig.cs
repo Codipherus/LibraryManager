@@ -14,16 +14,18 @@ namespace LibraryManager
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Book",
+                url: "book/{id}",
+                defaults: new { controller = "Home", action = "Book", id = UrlParameter.Optional }
+            );
+
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
 
-            routes.MapRoute(
-                name: "Book",
-                url: "book/{id}",
-                defaults: new { controller = "Home", action = "Book", id = UrlParameter.Optional }
-            );
         }
     }
 }
