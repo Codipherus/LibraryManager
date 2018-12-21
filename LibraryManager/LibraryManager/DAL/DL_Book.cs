@@ -8,7 +8,7 @@ namespace LibraryManager
 {
     public static class DL_Book
     {
-        static string ConnectionString = new SqlConnection("Data Source = WIN2012BASE; Initial Catalog = LibraryManager; Integrated Security = True;").ToString();
+        static string ConnectionString = "Data Source = WIN2012BASE; Initial Catalog = LibraryManagementSystem; Integrated Security = True;";
 
         public static List<Book> GetList()
         {
