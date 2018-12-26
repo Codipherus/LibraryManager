@@ -8,6 +8,7 @@ namespace LibraryManager.Controllers
 {
     public class HomeController : Controller
     {
+
         public ActionResult Index()
         {
             var list = DL_Book.GetList();
@@ -16,8 +17,20 @@ namespace LibraryManager.Controllers
 
         public ActionResult Book(int id)
         {
-            var book = DL_Book.GetList().First(x => x.Id == id);
+            var book = DL_Book.GetBook(id);
             return View(book);
+        }
+
+        public ActionResult Checkout(int id)
+        {
+            DL_Book.CheckOut(id);
+            return RedirectToAction("index");
+        }
+
+        public ActionResult Author(int id)
+        {
+            var author = DL_Author.GetAuthor(id);
+            return View(author);
         }
 
         public ActionResult About()
