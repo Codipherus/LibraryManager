@@ -10,13 +10,16 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(x => x.Title)
+                <i class="fas fa-book mr-2"></i> @Html.DisplayNameFor(x => x.Title)
             </th>
             <th>
-                @Html.DisplayNameFor(x => x.Author.FullName)
+                <i class="fas fa-user-alt mr-2"></i> @Html.DisplayNameFor(x => x.Author.FullName)
             </th>
             <th>
                 @Html.DisplayNameFor(x => x.Length)
+            </th>
+            <th>
+                Availability
             </th>
             <th>
 
@@ -37,20 +40,23 @@
                     @item.Length
                 </td>
                 <td>
+                    @item.QtyAvailable / @item.QtyTotal
+                </td>
+                <td>
                     @{
                         if (item.QtyAvailable > 0)
                         {
-                            @Html.ActionLink("Check Out", "checkout", new { id = item.Id })
+                            <a href="@Url.Action("checkout", new { id = item.Id})" class="btn btn-success">Check Out</a>
                         }
 
-                        if (item.QtyAvailable == 0)
+                        else if (item.QtyAvailable == 0)
                         {
-                            @Html.Raw("0 Available")
+                            <btn class="btn btn-dark disabled">None available</btn>
                         }
 
                         else
                         {
-                            @Html.Raw("Unavailable")
+                            <btn class="btn btn-dark disabled" title="Please report this issue">Error!</btn>
                         }
                     }
                 </td>

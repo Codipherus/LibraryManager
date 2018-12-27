@@ -107,13 +107,14 @@ namespace LibraryManager
             return list;
         }
 
-
         public static void CheckOut(int id)
         {
-            var query = "UPDATE media SET qty_checked = qty_checked - 1;";
+            var query = "UPDATE media SET QtyChecked = QtyChecked + 1 WHERE id = @Id;";
             using (var con = new SqlConnection(ConnectionString))
             {
+                con.Open();
                 var cmd = new SqlCommand(query, con);
+                cmd.Parameters.AddWithValue("@Id", id);
                 cmd.ExecuteNonQuery();
             }
         }

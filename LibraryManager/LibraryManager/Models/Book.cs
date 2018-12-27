@@ -41,7 +41,13 @@ namespace LibraryManager
         public int QtyChecked;
 
         [Display(Name = "Available Copies")]
-        public int QtyAvailable;
+        public int QtyAvailable
+        {
+            get
+            {
+                return QtyTotal - QtyChecked;
+            }
+        }
 
         public string ISBN;
     }
