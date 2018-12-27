@@ -7,3 +7,127 @@ h2 {
     font-size: 16pt;
     color: #4CAF50;
 }
+/* Cody's Template*/
+
+body {
+    padding: 50px 0;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#053565+0,0167a6+70,007ec6+100 */
+    background: #053565; /* Old browsers */
+    background: -moz-linear-gradient(left, #053565 0%, #0167a6 70%, #007ec6 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #053565 0%,#0167a6 70%,#007ec6 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #053565 0%,#0167a6 70%,#007ec6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#053565', endColorstr='#007ec6',GradientType=1 ); /* IE6-9 */
+    font-family: 'Open Sans', sans-serif;
+    /*   background-image: url("https://image.tmdb.org/t/p/original/xu9zaAevzQ5nnrsXN6JcahLnG4i.jpg"); */
+    background-size: cover;
+}
+
+.details {
+    padding: 15px 0;
+}
+
+.storyline {
+    text-align: justify;
+}
+
+.movie-card {
+    background-color: #fefefe;
+    padding: 1rem;
+    min-height: 20rem;
+    border-radius: 5px;
+    margin-top: 5rem;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;
+}
+
+.poster-float {
+    position: relative;
+    top: -2em;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+    .poster-float img {
+        border-radius: 5px;
+        box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.1) !important;
+    }
+
+.badge {
+    position: absolute;
+    top: -0.3rem;
+    right: -0.3rem;
+    font-size: .7em;
+}
+
+#back {
+    width: 30px;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.movie-images {
+    position: relative;
+}
+
+.images img {
+    border-radius: 5px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.1),0 6px 20px 0 rgba(0,0,0,0.1) !important;
+}
+
+.images {
+    padding-left: 20px;
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 10px;
+}
+
+.movie-new {
+    display: inline-block;
+    padding: 5px;
+    position: relative;
+    top: 20px;
+    margin-bottom: 20px;
+}
+
+.movie-title {
+    padding-top: 0.5em;
+    font-size: 1.2em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 150px;
+}
+
+
+.movie-lead {
+    margin-top: -0.2em;
+    font-size: .9em;
+    color: #8a99a2;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+    .storyline {
+        padding: 15px;
+    }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+}
+
+
+
+/* Large and up */
+@media screen and (min-width: 64em) {
+}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+}

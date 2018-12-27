@@ -594,6 +594,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Shared\_NavbarPartial.cshtml" />
     <Content Include="Views\Home\Author.cshtml" />
+    <Content Include="Views\Home\CodyTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
