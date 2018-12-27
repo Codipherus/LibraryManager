@@ -171,6 +171,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="DAL\DL_Author.cs" />
     <Compile Include="DAL\DL_Book.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -591,7 +592,8 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.bootstrap.min.js.map" />
     <Content Include="Views\Home\Book.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
-    <Content Include="Views\Home\View.cshtml" />
+    <Content Include="Views\Shared\_NavbarPartial.cshtml" />
+    <Content Include="Views\Home\Author.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

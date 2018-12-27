@@ -12,9 +12,11 @@ namespace LibraryManager
 
         public string Title;
 
-        public string Author;
+        //public string Author;
 
-        public int AuthorID = 0;
+        //public int AuthorID = 0;
+
+        public Author Author = new Author();
 
         public DateTime Release;
 
