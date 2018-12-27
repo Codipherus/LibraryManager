@@ -192,6 +192,7 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap.min.css" />
     <Content Include="Content\DataTables\css\autoFill.bootstrap4.css" />
@@ -364,6 +365,27 @@
     <Content Include="Content\fontawesome\svg-with-js.min.css" />
     <Content Include="Content\fontawesome\v4-shims.css" />
     <Content Include="Content\fontawesome\v4-shims.min.css" />
+    <Content Include="Content\img\logo_1.jpg" />
+    <Content Include="Content\img\logo_10.jpg" />
+    <Content Include="Content\img\logo_11.jpg" />
+    <Content Include="Content\img\logo_12.jpg" />
+    <Content Include="Content\img\logo_13.jpg" />
+    <Content Include="Content\img\logo_14.jpg" />
+    <Content Include="Content\img\logo_15.jpg" />
+    <Content Include="Content\img\logo_16.jpg" />
+    <Content Include="Content\img\logo_17.jpg" />
+    <Content Include="Content\img\logo_18.jpg" />
+    <Content Include="Content\img\logo_19.jpg" />
+    <Content Include="Content\img\logo_2.jpg" />
+    <Content Include="Content\img\logo_20.jpg" />
+    <Content Include="Content\img\logo_3.jpg" />
+    <Content Include="Content\img\logo_4.jpg" />
+    <Content Include="Content\img\logo_5.jpg" />
+    <Content Include="Content\img\logo_6.jpg" />
+    <Content Include="Content\img\logo_7.jpg" />
+    <Content Include="Content\img\logo_8.jpg" />
+    <Content Include="Content\img\logo_9.jpg" />
+    <Content Include="Content\img\showcase.jpg" />
     <Content Include="Content\login.css" />
     <Content Include="Content\webfonts\fa-brands-400.svg" />
     <Content Include="Content\webfonts\fa-regular-400.svg" />
@@ -523,6 +545,7 @@
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Home\index.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -536,7 +559,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index_old.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
@@ -571,6 +594,7 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Shared\_NavbarPartial.cshtml" />
     <Content Include="Views\Home\Author.cshtml" />
+    <Content Include="Views\Home\CodyTest.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

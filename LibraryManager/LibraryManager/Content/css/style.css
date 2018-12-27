@@ -1,0 +1,402 @@
+body{ 
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
+}
+
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
+  
+}
+
+img{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:50%;
+  margin-top:20px;
+  
+}
+ul{
+  margin:0;
+  padding:0;
+}
+
+.button_1{
+  height:36px;
+  width:25px;
+  background:black;
+  color:#ffffff;
+  border-radius: 10px;
+  margin-right:75px;
+  border:2px solid white;
+  
+}
+
+.dark{
+  padding:15px;
+  background:black;
+  color:#ffffff;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+/* Header **/
+header{
+  background:lightseagreen;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:black 3px solid;
+  border-top:3px solid black
+}
+
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
+
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:black;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:black;
+  font-weight:bold;
+}
+
+#boxes{
+  display:block;
+  background-color: black;
+  color:white;
+  margin:-20px;
+  
+}
+
+
+#showcase{
+  min-height:400px;
+  background:url('../img/showcase.jpg') no-repeat 0 -400px;
+  text-align:center;
+  z-index:0.50;
+
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:85px;
+  color:black;
+  font-family:Helvetica, sans-serif; 
+  margin-bottom:10px;
+    animation: move 1s;
+    -webkit-animation: move 1s;
+  }
+  
+  @keyframes move {
+    from {
+      width: 300%;
+    }
+  
+    to {
+      width: 100%;
+    }
+
+  }
+
+
+#showcase form{
+  display: inline-block;
+  font-weight: bold;
+  font-size: 25px;
+
+}
+
+#showcase button:hover{
+  color:white;
+}
+#showcase button{
+  color:black;
+  font-weight: bold;
+  font-size:20px;
+  border-radius: 10px;
+  width: 100px;
+  height:35px;
+  border:1px solid black;
+  margin:10px;
+}
+
+#showcase input{
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  color:white;
+  background-color: black;
+  border:1px solid white;
+
+}
+
+input{
+  display: inline-block;
+  text-align: center;
+  font-size: 15px;
+  color:white;
+  background-color: black;
+  border:2px solid white;
+  float: left;
+
+}
+
+
+
+
+#showcase p{
+  font-size:20px;
+}
+
+/* Newsletter */
+#newsletter{
+  padding:15px;
+  color:black;
+  background:lightseagreen;
+  border-bottom:3px solid black;
+  border-top:3px solid black;
+}
+
+#newsletter h1{
+  float:left;
+  
+}
+
+#newsletter form {
+  float:right;
+  margin-top:15px;
+  
+}
+
+#newsletter input[type="email"]{
+  padding:4px;
+  height:25px;
+  width:250px;
+}
+
+
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:lightseagreen;
+  text-align: center;
+  border-top:3px solid black;
+  border-bottom:3px solid black;
+}
+
+
+
+  header{
+    padding-bottom:20px;
+  }
+
+  #showcase h1{
+    margin-top:40px;
+  }
+
+  .elastislide-list {
+    list-style-type: none;
+    display: none;
+  }
+  
+  .no-js .elastislide-list {
+    display: block;
+  }
+  
+  .elastislide-carousel ul li {
+    min-width: 20px; 
+  }
+  
+  .elastislide-wrapper {
+    position: relative;
+    background-color: #fff;
+    margin: 0 auto;
+    min-height: 60px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+  
+  .elastislide-wrapper.elastislide-loading {
+    background-image: url(https://tympanus.net/Development/Elastislide/images/loading.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  
+  .elastislide-horizontal {
+    padding: 10px 40px;
+  }
+  
+  .elastislide-vertical {
+    padding: 40px 10px;
+  }
+  
+  .elastislide-carousel {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .elastislide-carousel ul {
+    position: relative;
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+  
+  .elastislide-horizontal ul {
+    white-space: nowrap;
+  }
+  
+  .elastislide-carousel ul li {
+    margin: 0;
+    -webkit-backface-visibility: hidden;
+  }
+  
+  .elastislide-horizontal ul li {
+    height: 100%;
+    display: inline-block;
+  }
+  
+  .elastislide-vertical ul li {
+    display: block;
+  }
+  
+  .elastislide-carousel ul li a {
+    display: inline-block;
+    width: 100%;
+  }
+  
+  .elastislide-carousel ul li a img {
+    display: block;
+    border: 2px solid white;
+    max-width: 100%;
+  }
+  
+  /* Navigation Arrows */
+  
+  .elastislide-wrapper nav span {
+    position: absolute;
+    background: #ddd url(https://tympanus.net/Development/Elastislide/images/nav.png) no-repeat 4px 3px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    text-indent: -9000px;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  
+  .elastislide-wrapper nav span:hover {
+    opacity: 1.0
+  }
+  
+  .elastislide-horizontal nav span {
+    top: 50%;
+    left: 10px;
+    margin-top: -11px;
+  }
+  
+  .elastislide-vertical nav span {
+    top: 10px;
+    left: 50%;
+    margin-left: -11px;
+    background-position: -17px 5px;
+  }
+  
+  .elastislide-horizontal nav span.elastislide-next {
+    right: 10px;
+    left: auto;
+    background-position: 4px -17px;
+  }
+  
+  .elastislide-vertical nav span.elastislide-next {
+    bottom: 10px;
+    top: auto;
+    background-position: -17px -18px;
+  }
+  
+  .demo-3 .elastislide-horizontal {
+    background-color: #000;
+    padding: 30px 60px;
+  }
+  
+  .no-touch .demo-3 .elastislide-horizontal {
+    opacity: 0.8;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    -moz-transition: opacity 0.3s ease-in-out;
+    -ms-transition: opacity 0.3s ease-in-out;
+    -o-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .no-touch .demo-3 .elastislide-horizontal:hover {
+    opacity: 1;
+  }
+  
+  .demo-3 .elastislide-wrapper nav span {
+    background-color: #000;
+  }
+  
+  .demo-3 .elastislide-carousel ul li a{
+    padding: 0 10px;
+  }
+  
+  .demo-3 .elastislide-carousel ul li a img {
+    border-radius: 10px;
+    border: none;
+  }
+  
+  .demo-4 .elastislide-horizontal {
+    background-color: transparent;
+    border-radius: 20px 20px 0 0;
+  }
+  
+  .demo-3 .elastislide-horizontal.elastislide-loading,
+  .demo-4 .elastislide-horizontal.elastislide-loading {
+    background-image: url(https://tympanus.net/Development/Elastislide/images/loading_dark.gif);
+  }
+
+
+  #newsletter button, .quote button{
+    display:block;
+    width:35%;
+  }
+
+
+
