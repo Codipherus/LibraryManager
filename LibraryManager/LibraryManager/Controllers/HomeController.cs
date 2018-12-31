@@ -8,11 +8,15 @@ namespace LibraryManager.Controllers
 {
     public class HomeController : Controller
     {
+        public ActionResult Landing()
+        {
+            return View("index");
+        }
 
         public ActionResult Index()
         {
             var list = DL_Book.GetList();
-            return View(list);
+            return View("index_old", list);
         }
 
         public ActionResult Book(int id)

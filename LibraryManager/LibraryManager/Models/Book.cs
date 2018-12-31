@@ -18,6 +18,7 @@ namespace LibraryManager
 
         public Author Author = new Author();
 
+        [DisplayFormat(DataFormatString = "MM/dd/yyyy")]
         public DateTime Release;
 
         public string Genre;
@@ -50,5 +51,20 @@ namespace LibraryManager
         }
 
         public string ISBN;
+
+        public string ImgSrc
+        {
+            get
+            {
+                if(ISBN != "")
+                {
+                    return "http://covers.openlibrary.org/b/isbn/" + ISBN + "-L.jpg";
+                }
+                else
+                {
+                    return "http://placehold.it/350x500";
+                }
+            }
+        }
     }
 }

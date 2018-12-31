@@ -21,9 +21,14 @@
             <th>
                 Availability
             </th>
-            <th>
+            @{
+                if (User.Identity.IsAuthenticated)
+                {
+                    <th>
 
-            </th>
+                    </th>
+                }
+            }
         </tr>
     </thead>
     <tbody>
@@ -34,7 +39,7 @@
                     @Html.ActionLink(item.Title, "book", new { id = item.Id })
                 </td>
                 <td>
-                    @Html.ActionLink(item.Author.FullName, "author", new {id = item.Author.Id})
+                    @Html.ActionLink(item.Author.FullName, "author", new { id = item.Author.Id })
                 </td>
                 <td>
                     @item.Length
@@ -42,26 +47,30 @@
                 <td>
                     @item.QtyAvailable / @item.QtyTotal
                 </td>
-                <td>
-                    @{
-                        if (item.QtyAvailable > 0)
-                        {
-                            <a href="@Url.Action("checkout", new { id = item.Id})" class="btn btn-success">Check Out</a>
-                        }
+                @{
+                    if (User.Identity.IsAuthenticated)
+                    {
+                        <td>
+                            @if (item.QtyAvailable > 0)
+                            {
+                                <a href="@Url.Action("checkout", new { id = item.Id})" class="btn btn-success">Check Out</a>
+                            }
 
-                        else if (item.QtyAvailable == 0)
-                        {
-                            <btn class="btn btn-dark disabled">None available</btn>
-                        }
+                            else if (item.QtyAvailable == 0)
+                            {
+                                <btn class="btn btn-dark disabled">None available</btn>
+                            }
 
-                        else
-                        {
-                            <btn class="btn btn-dark disabled" title="Please report this issue">Error!</btn>
-                        }
+                            else
+                            {
+                                <btn class="btn btn-dark disabled" title="Please report this issue">Error!</btn>
+                            }
+                        </td>
+
                     }
-                </td>
+                }
             </tr>
-        }
+                    }
     </tbody>
 
 </table>
@@ -75,10 +84,10 @@
 {
     @Scripts.Render("~/Scripts/DataTables/jquery.dataTables.min.js");
     @Scripts.Render("~/Scripts/DataTables/dataTables.bootstrap4.min.js");
-    
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#books').DataTable();
         });
-    </script>   
+    </script>
 }
