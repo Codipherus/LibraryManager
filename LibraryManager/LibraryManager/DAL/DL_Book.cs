@@ -111,13 +111,13 @@ namespace LibraryManager
         public static void CheckOut(int id)
         {
             var query = "UPDATE media SET QtyChecked = QtyChecked + 1 WHERE id = @Id;";
-            query += "INSERT INTO media_checked_out(user_id, media_id) VALUES(@UserId, @Id);";
+            //query += "INSERT INTO media_checked_out(user_id, media_id) VALUES(@UserId, @Id);";
             using (var con = new SqlConnection(ConnectionString))
             {
                 con.Open();
                 var cmd = new SqlCommand(query, con);
                 cmd.Parameters.AddWithValue("@Id", id);
-                cmd.Parameters.AddWithValue("@UserId", HttpContext.Current.User.Identity.GetUserId());
+                //cmd.Parameters.AddWithValue("@UserId", HttpContext.Current.User.Identity.GetUserId());
                 cmd.ExecuteNonQuery();
             }
         }
