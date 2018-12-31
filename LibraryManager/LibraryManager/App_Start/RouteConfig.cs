@@ -20,6 +20,12 @@ namespace LibraryManager
             );
 
             routes.MapRoute(
+                name: "Books",
+                url: "books",
+                defaults: new { controller = "Home", action = "books" }
+            );
+
+            routes.MapRoute(
                 name: "Author",
                 url: "author/{id}",
                 defaults: new { controller = "Home", action = "Author", id = UrlParameter.Optional }    

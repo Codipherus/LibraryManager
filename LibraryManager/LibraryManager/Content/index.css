@@ -100,7 +100,7 @@ header a:hover{
 
 
 #showcase{
-  min-height:400px;
+  min-height:200px;
   background:url('../img/showcase.jpg') no-repeat 0 -400px;
   text-align:center;
   z-index:0.50;
@@ -109,9 +109,8 @@ header a:hover{
 
 #showcase h1{
   margin-top:100px;
-  font-size:85px;
-  color:black;
-  font-family:Helvetica, sans-serif; 
+  font-size:64px;
+  color:white;
   margin-bottom:10px;
     animation: move 1s;
     -webkit-animation: move 1s;
@@ -171,9 +170,6 @@ input{
 
 }
 
-
-
-
 #showcase p{
   font-size:20px;
 }
@@ -181,10 +177,9 @@ input{
 /* Newsletter */
 #newsletter{
   padding:15px;
-  color:black;
-  background:lightseagreen;
-  border-bottom:3px solid black;
-  border-top:3px solid black;
+  background:#007BFF;
+  border-bottom:1px solid #0055AA;
+  border-top:1px solid #0055AA;
 }
 
 #newsletter h1{
@@ -204,19 +199,15 @@ input{
   width:250px;
 }
 
-
-
 footer{
-  padding:20px;
-  margin-top:20px;
+  padding:10px;
+  margin-top:10px;
   color:#ffffff;
-  background-color:lightseagreen;
+  background-color:#007bff;
   text-align: center;
-  border-top:3px solid black;
-  border-bottom:3px solid black;
+  border-top:1px solid #0055AA;
+  border-bottom:1px solid #0055AA;
 }
-
-
 
   header{
     padding-bottom:20px;

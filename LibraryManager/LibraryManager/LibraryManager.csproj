@@ -597,6 +597,7 @@
     <Content Include="Views\Shared\_NavbarPartial.cshtml" />
     <Content Include="Views\Home\Author.cshtml" />
     <Content Include="Views\Home\CodyTest.cshtml" />
+    <Content Include="Views\Shared\_LayoutLanding.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
