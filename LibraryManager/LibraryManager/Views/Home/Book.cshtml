@@ -1,5 +1,9 @@
 ﻿@model Book
 
+@{ 
+    ViewBag.Title = Model.Title;
+}
+
 <div>
     <div class="row details-page">
         <div class="movie-card">
@@ -11,17 +15,26 @@
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <h2 class="ti101tle">@Html.DisplayFor(model => model.Title)</h2>
-                    <h5 class="tag-line">@Html.DisplayFor(model => model.Author.FullName)</h5>
+                    <h2 id="title" class="title">@Html.DisplayFor(model => model.Title)</h2>
+                    <a class="tag-line" href="@Url.Action("author", "home", new { id = Model.Author.Id })">@Html.DisplayFor(model => model.Author.FullName)</a>
                     <div class="row details">
-                        <div class="col-sm-6">
-                            <b>Original Release:</b> @Model.Release.ToShortDateString()
-                        </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-12 mb-3">
                             <b>ISBN:</b> @Html.DisplayFor(model => model.ISBN)
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-sm-6 mb-3">
+                            <b>Original Release:</b> @Model.Release.ToShortDateString()
+                        </div>
+                        <div class="col-sm-6 mb-3">
                             <b>Pages:</b> @Html.DisplayFor(model => model.Length)
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <b>Genre:</b> @Html.DisplayFor(model => model.Genre)
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <b>Subgenre:</b> @Html.DisplayFor(model => model.Subgenre)
+                        </div>
+                        <div class="col-sm-6 mb-3">
+                            <b>Publisher:</b> @Model.Publisher
                         </div>
 
                     </div>

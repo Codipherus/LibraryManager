@@ -31,6 +31,8 @@ namespace LibraryManager
                 defaults: new { controller = "Home", action = "Author", id = UrlParameter.Optional }    
             );
 
+            routes.MapRoute("Request", "submit-request", new { controller = "home", action = "submitrequest" });
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

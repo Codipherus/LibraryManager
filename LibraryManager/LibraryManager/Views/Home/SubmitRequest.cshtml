@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Submit Request";
+}
+
+@{ 
+    if (ViewBag.Alert == true)
+    {
+        <div id="alert" class="alert alert-@ViewBag.AlertStatus mt-2">@ViewBag.AlertMessage</div>
+        {
+            ViewBag.Alert = false;
+        }
+    }
+}
+
+<h2 id="title" class="my-4">Submit Request</h2>
+
+<div class="container col-6 mb-5">
+    <form action="@Url.Action("SubmitRequest", "home")" method="post">
+        <div class="form-group">
+            <label for="bookTitle" class="col-form-label">Title</label>
+            <input id="request-title" type="text" class="form-control" name="title"/>
+        </div>
+        <div class="form-group">
+            <label for="bookAuthor" class="col-form-label">Author</label>
+            <input id="request-author" type="text" class="form-control" name="author" />
+        </div>
+        <div class="form-group container text-center w-100">
+            <input id="request-submit" type="submit" class="btn btn-success mx-auto" value="Submit!"/>
+        </div>
+    </form>
+</div>

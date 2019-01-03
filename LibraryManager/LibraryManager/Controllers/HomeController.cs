@@ -17,6 +17,9 @@ namespace LibraryManager.Controllers
         public ActionResult Books()
         {
             var list = DL_Book.GetList();
+            ViewBag.Alert = Session["Alert"];
+            ViewBag.AlertStatus = Session["AlertStatus"];
+            ViewBag.AlertMessage = Session["AlertMessage"];
             return View("index_old", list);
         }
 
@@ -26,9 +29,17 @@ namespace LibraryManager.Controllers
             return View(book);
         }
 
+        [Authorize]
         public ActionResult Checkout(int id)
         {
             DL_Book.CheckOut(id);
+            //ViewBag.Alert = true;
+            //ViewBag.AlertStatus = "success";
+            //ViewBag.AlertMessage = "Checkout successful!";
+            Session["Alert"] = true;
+            Session["AlertStatus"] = "success";
+            Session["AlertMessage"] = "Checkout successful!";
+
             return RedirectToAction("books");
         }
 
@@ -38,17 +49,19 @@ namespace LibraryManager.Controllers
             return View(author);
         }
 
-        public ActionResult About()
+        public ActionResult SubmitRequest()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        [HttpPost]
+        [Authorize]
+        public ActionResult SubmitRequest(string title, string author)
         {
-            ViewBag.Message = "Your contact page.";
-
+            DataAccess.RequestTitle(title, author);
+            ViewBag.Alert = true;
+            ViewBag.AlertStatus = "success";
+            ViewBag.AlertMessage = "Request submitted!";
             return View();
         }
     }

@@ -5,6 +5,11 @@ VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryManager", "LibraryManager\LibraryManager.csproj", "{2CA26D49-B5A0-418B-A67E-35605F49A959}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAutomation", "TestAutomation\TestAutomation.csproj", "{9EDA5A49-412B-41F8-BE0A-2CEC5882C8AE}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2CA26D49-B5A0-418B-A67E-35605F49A959} = {2CA26D49-B5A0-418B-A67E-35605F49A959}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +20,10 @@ Global
 		{2CA26D49-B5A0-418B-A67E-35605F49A959}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CA26D49-B5A0-418B-A67E-35605F49A959}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CA26D49-B5A0-418B-A67E-35605F49A959}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EDA5A49-412B-41F8-BE0A-2CEC5882C8AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EDA5A49-412B-41F8-BE0A-2CEC5882C8AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EDA5A49-412B-41F8-BE0A-2CEC5882C8AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EDA5A49-412B-41F8-BE0A-2CEC5882C8AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

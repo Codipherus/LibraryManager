@@ -14,7 +14,7 @@ namespace LibraryManager
         public static Book GetBook(int id)
         {
             var book = new Book();
-            var query = "SELECT m.Id, m.Title, a.FirstName + ' ' + a.LastName AS authorname, m.Length, m.Release, m.QtyTotal, m.QtyChecked, m.ISBN, m.AuthorID, m.GenreID, m.SubGenreID, m.PublisherID FROM media AS m LEFT JOIN author AS a ON m.AuthorID = a.AuthorID WHERE id = @ID;";
+            var query = "SELECT m.Id, m.Title, a.AuthorID, a.FirstName,a.LastName, m.Length, m.Release, m.QtyTotal, m.QtyChecked, m.ISBN, g.GenreName, sg.SubGenre, p.PublisherName FROM media AS m LEFT JOIN author AS a ON m.AuthorID = a.AuthorID LEFT JOIN Genre AS g ON m.GenreId = g.GenreID LEFT JOIN SubGenre AS sg ON m.SubGenreID = sg.SubGenreID LEFT JOIN Publisher AS p ON m.PublisherID = p.PublisherID WHERE id = @ID;";
             using (var con = new SqlConnection(ConnectionString))
             {
                 con.Open();
@@ -25,14 +25,15 @@ namespace LibraryManager
                 {
                     book.Id = Convert.ToInt32(rdr["id"]);
                     book.Title = rdr["title"].ToString();
-                    //book.Author = rdr["authorname"].ToString();
+                    book.Author.Id = Convert.ToInt32(rdr["AuthorId"]);
+                    book.Author.FirstName = rdr["FirstName"].ToString();
+                    book.Author.LastName = rdr["LastName"].ToString();
                     //book.Release = Convert.ToDateTime(rdr["release"]);
-                    //book.Genre = rdr["genre"].ToString();
-                    //book.Subgenre = rdr["subgenre"].ToString();
-                    //book.Publisher = rdr["publisher"].ToString();
+                    book.Genre = rdr["GenreName"].ToString();
+                    book.Subgenre = rdr["subgenre"].ToString();
+                    book.Publisher = rdr["PublisherName"].ToString();
                     book.Length = Convert.ToInt32(rdr["length"]);
                     book.QtyTotal = Convert.ToInt32(rdr["QtyTotal"]);
-                    //book.QtyAvailable = Convert.ToInt32(rdr["qty_available"]);
                     book.QtyChecked = Convert.ToInt32(rdr["QtyChecked"]);
                     book.ISBN = rdr["ISBN"].ToString();
                 }
@@ -44,8 +45,8 @@ namespace LibraryManager
         public static List<Book> GetList()
         {
             var list = new List<Book>();
-            var query = "SELECT m.Id, m.Title, a.FirstName, a.LastName, m.Length, m.Release, m.QtyTotal, m.QtyChecked, m.ISBN, m.AuthorID, m.GenreID, m.SubGenreID, m.PublisherID FROM media AS m LEFT JOIN author AS a ON m.AuthorID = a.AuthorID;";
-            using(var con = new SqlConnection(ConnectionString))
+            var query = "SELECT m.Id, m.Title, a.AuthorID, a.FirstName,a.LastName, m.Length, m.Release, m.QtyTotal, m.QtyChecked, m.ISBN, g.GenreName, sg.SubGenre, p.PublisherName FROM media AS m LEFT JOIN author AS a ON m.AuthorID = a.AuthorID LEFT JOIN Genre AS g ON m.GenreId = g.GenreID LEFT JOIN SubGenre AS sg ON m.SubGenreID = sg.SubGenreID LEFT JOIN Publisher AS p ON m.PublisherID = p.PublisherID;";
+            using (var con = new SqlConnection(ConnectionString))
             {
                 con.Open();
                 var cmd = new SqlCommand(query, con);
@@ -59,12 +60,11 @@ namespace LibraryManager
                     book.Author.FirstName = rdr["FirstName"].ToString();
                     book.Author.LastName = rdr["LastName"].ToString();
                     //book.Release = Convert.ToDateTime(rdr["release"]);
-                    //book.Genre = rdr["genre"].ToString();
-                    //book.Subgenre = rdr["subgenre"].ToString();
-                    //book.Publisher = rdr["publisher"].ToString();
+                    book.Genre = rdr["GenreName"].ToString();
+                    book.Subgenre = rdr["Subgenre"].ToString();
+                    book.Publisher = rdr["PublisherName"].ToString();
                     book.Length = Convert.ToInt32(rdr["length"]);
                     book.QtyTotal = Convert.ToInt32(rdr["QtyTotal"]);
-                    //book.QtyAvailable = Convert.ToInt32(rdr["qty_available"]);
                     book.QtyChecked = Convert.ToInt32(rdr["QtyChecked"]);
                     book.ISBN = rdr["ISBN"].ToString();
                     list.Add(book);

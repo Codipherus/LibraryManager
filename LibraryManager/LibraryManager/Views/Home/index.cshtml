@@ -11,11 +11,12 @@
     </div>
 </section>
 
+<h3 class="mt-3 mb-2 text-dark text-center">Most Popular Titles</h3>
 <ul id="carousel" class="elastislide-list">
     @{
         foreach (Book i in Model)
         {
-            <li><a href="@Url.Action("book", "home", new { i.Id} )"><img src="@i.ImgSrc" alt="@i.Title" /></a></li>
+            <li class="book-item"><a id="book-@i.Id" href="@Url.Action("book", "home", new { i.Id} )"><img src="@i.ImgSrc" alt="@i.Title" title="@i.Title" /></a></li>
         }
     }
 </ul>

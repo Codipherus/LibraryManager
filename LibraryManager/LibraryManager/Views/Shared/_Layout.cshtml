@@ -10,14 +10,14 @@
 </head>
 <body>
     @Html.Partial("_NavbarPartial")
-    <div class="container body-content">
+    <div class="container body-content"  style="min-height:calc(100vh - 56px - 72px - 1px)";>
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - Library Management</p>
-        </footer>
+        
     </div>
-
+    <hr class="my-0"/>
+    <footer class="bg-primary py-3">
+        <p class="text-center text-white">&copy; @DateTime.Now.Year - Library Manager</p>
+    </footer>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
